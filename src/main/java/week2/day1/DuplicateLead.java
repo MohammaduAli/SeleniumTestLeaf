@@ -30,7 +30,7 @@ public class DuplicateLead {
 		driver.findElement(By.id(txtIDFirstName)).sendKeys(newFirstName);
 		
 //		20.Click on Create Lead Button
-		driver.findElement(By.xpath(btnXpathCreateLead));
+		driver.findElement(By.xpath(btnXpathCreateLead)).click();;
 		
 //		21. Get the Title of Resulting Page(refer the video)  using driver.getTitle()
 		System.out.println("Page name after Duplicating Lead : " + driver.getTitle());

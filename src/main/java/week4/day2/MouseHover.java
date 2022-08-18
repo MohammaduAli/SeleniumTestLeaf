@@ -1,4 +1,3 @@
-package week4.day2;
 
 import java.time.Duration;
 

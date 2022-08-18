@@ -25,6 +25,7 @@ public class CreateLead {
 		String txtIdDepartment = "createLeadForm_departmentName";
 		String txtIdDescription = "createLeadForm_description";
 		String txtIdEmail = "createLeadForm_primaryEmail";
+		String txtIdPhoneNumber = "createLeadForm_primaryPhoneNumber";
 		String ddIdState = "createLeadForm_generalStateProvinceGeoId";
 		String btnNameCreateLead = "submitButton";
 
@@ -38,6 +39,7 @@ public class CreateLead {
 		String department = "IT";
 		String description = "Test Automation";
 		String email = "hello.world@earth.com";
+		String phoneNumber = "123456789";
 		String state = "New York";
 		
 		WebDriverManager.chromedriver().setup();
@@ -89,6 +91,9 @@ public class CreateLead {
 //		  13. Enter your email in the E-mail address Field using the locator of your choice
 		driver.findElement(By.id(txtIdEmail)).sendKeys(email);
 		
+//		Enter phone number
+		driver.findElement(By.id(txtIdPhoneNumber)).sendKeys(phoneNumber);
+		
 //		  14. Select State/Province as NewYork Using Visible Text
 		WebElement eleState = driver.findElement(By.id(ddIdState));
 		Select ddState = new Select(eleState);
@@ -97,7 +102,7 @@ public class CreateLead {
 //		  15. Click on Create Button
 		driver.findElement(By.name(btnNameCreateLead)).click();
 		
-//		  16. Get the Title of Resulting Page. refer the video  using driver.getTitle()
+//		  16. Get the Title of Resulting Page. refer the video using driver.getTitle()
 		System.out.println("Page name after Lead Creation : " + driver.getTitle());
 		
 	}
